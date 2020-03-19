@@ -9,22 +9,22 @@ module.exports = class UserService {
     };
 
     async getOneUser(id) {
-        const result = await models.readOne('customers', id);
+        const result = await models.readOne('users', id);
         return result;
     };
 
     async deleteUser(id) {
-        const result = await models.delete('customers', id);
+        const result = await models.delete('users', id);
         return result;
     };
 
     async updateUser(object) {
-        const result = await models.update(object, 'customers');
+        const result = await models.update(object, 'users');
         return result;
     };
 
     async createUser(object) {
-        const result = await models.create(object, 'customers');
+        const result = await models.create(object, 'users');
         return result;
     };
 }

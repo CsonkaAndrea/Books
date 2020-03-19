@@ -8,7 +8,7 @@ router.get('/', async (req, res, next) => {
   console.log("megy :)");
   const getAllUsers = await userService.getAllUsers()
   console.log(getAllUsers);
-  res.render('index');
+  res.json(getAllUsers);
 });
 
 module.exports = router;
